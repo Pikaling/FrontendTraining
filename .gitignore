@@ -1,0 +1,8 @@
+# IDEA Stuff
+*.idea
+*.iml
+.idea
+.idea_modules
+
+#mac stuff
+.DS_STORE
