@@ -1,0 +1,144 @@
+@font-face {
+  font-family: highlightFont;
+  src: url('http://ir.ebaystatic.com/rs/v/rtxsscrl0i5hxibz1wk5e1iehqd.woff');
+}
+
+@default-padding: 20px;
+@border-colour: #ccc;
+@quote-border: 1px solid @border-colour;
+@highlight-colour: #fab558;
+@highlight-font: highlightFont, "Palatino Linotype", "Book Antiqua", Palatino, serif;
+
+.quote-widget-wrapper {
+  .widget {
+    width: 100%;
+  }
+}
+
+.quote-wrapper {
+  box-sizing: border-box;
+  padding: 0 20px;
+  border: @quote-border;
+  float: left;
+
+  .widget {
+    margin: 20px 0;
+  }
+
+  p {
+    margin: 10px 0;
+  }
+
+  .quote-intro {
+    font-weight: bold;
+    margin-left: 1%;
+  }
+
+  @media screen and (min-width: 768px) {
+    padding: 0 0 20px;
+    .widget-wrapper .widget {
+      width: 31%;
+      margin: 0 1%;
+      float: left;
+    }
+  }
+
+  .quote {
+    min-width: 240px;
+    border: @quote-border;
+    box-sizing: border-box;
+    .branding {
+      height: 120px;
+      display: table-row;
+
+      .garage-name {
+        width: 100%;
+        display: table-cell;
+        vertical-align: top;
+        padding: 25px @default-padding;
+        border-right: @quote-border;
+        font-family: @highlight-font;
+        font-size: 1.5em;
+      }
+      .garage-logo-wrapper {
+        display: table-cell;
+        vertical-align: middle;
+        img {
+          box-sizing: border-box;
+          width: 120px;
+          padding: 15px;
+        }
+      }
+    }
+    .total-cost-wrapper {
+      float: left;
+      width: 100%;
+      box-sizing: border-box;
+      border-top: @quote-border;
+      .total-cost {
+        float: left;
+        font-size: 1em;
+        font-weight: bold;
+        padding: @default-padding;
+        span {
+          font-weight: normal;
+          font-size: 0.75em;
+          display: block;
+        }
+      }
+      .cost {
+        padding: @default-padding;
+        color: @highlight-colour;
+        font-size: 1.75em;
+        float: right;
+        font-family: @highlight-font;
+      }
+    }
+    .contact-garage-wrapper {
+      background: url('../../img/border-seperator.png') top left repeat-x #333;
+      padding: 34px 20px 27px;
+
+      clear: both;
+      text-align: center;
+      a {
+        box-shadow: 0px 3px 2px #222;
+        padding: 10px 49px;
+        border-radius: 3px;
+        color: white;
+        text-decoration: none;
+        text-shadow: 0px 1px 1px #555;
+        background: linear-gradient(180deg, #71b52e, #489314);
+      }
+    }
+    .about-the-workshop, .payment-details {
+      padding: @default-padding;
+      h4 {
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+    }
+
+    .about-the-workshop {
+      p:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    .payment-details {
+      border-top: @quote-border;
+
+      table {
+        width: 100%;
+        tr:last-child td {
+          padding-bottom: 0;
+        }
+        td {
+          padding: 5px 0px 5px;
+        }
+        td:last-child {
+          text-align: right;
+        }
+      }
+    }
+  }
+}
