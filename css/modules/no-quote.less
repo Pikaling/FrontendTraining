@@ -1,0 +1,61 @@
+@import "../variables.less";
+
+@please-wait-colour: #a8a8a8;
+
+.no-quote {
+  height: 1px;
+
+  > div {
+    text-align: center;
+    border: 1px dotted @border-colour;
+    box-sizing: border-box;
+    white-space: nowrap;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 32.66%;
+
+    &:after {
+      content: "";
+      display: inline-block;
+      height: 100%;
+      width: 0;
+      overflow: hidden;
+      font-size: 1px;
+      vertical-align: middle;
+    }
+  }
+
+  > div > div {
+    display: inline-block;
+    vertical-align: middle;
+    white-space: normal;
+
+    h1 {
+      font-style: italic;
+
+    }
+    p, h1{
+      color: @please-wait-colour;
+
+    }
+    p {
+      font-size: 1.5em;
+      font-family: @highlight-font;
+      font-weight: lighter;
+    }
+    img {
+      padding: 35px 0px;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    height: auto;
+
+    > div {
+      position: static;
+      width: auto;
+    }
+  }
+
+}

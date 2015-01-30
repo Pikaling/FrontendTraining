@@ -1,9 +1,46 @@
-.jobs-header-widget-wrapper {
-  .jobs-in-progress {
+@import "../variables.less";
 
-    h2 {
-      font-size: 1.5em;
-      margin: 10px 0px;
+@counter-text: #999;
+
+.your-jobs {
+  border-bottom: @job-border;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.jobs-in-progress {
+
+  h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+}
+
+.counter-container {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+
+  @media screen and (max-width: 768px) {
+    position: static;
+  }
+
+  .counter {
+    padding: 20px 12px;
+    font-size: 1.5rem;
+    color: @highlight-colour;
+    text-align: center;
+    display: inline-block;
+
+    span {
+      display: block;
+      font-weight: normal;
+      font-size: 0.75rem;
+      color: @counter-text;
     }
+  }
+
+  .quote-widget-wrapper .quote-wrapper .widget-wrapper & {
+    position: static;
   }
 }

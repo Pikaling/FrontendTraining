@@ -7,6 +7,7 @@
     <link rel="stylesheet/less" type="text/css" href="css/layout.less"/>
     <link rel="stylesheet/less" type="text/css" href="css/modules/quote.less"/>
     <link rel="stylesheet/less" type="text/css" href="css/modules/job-details.less"/>
+    <link rel="stylesheet/less" type="text/css" href="css/modules/no-quote.less"/>
     <link rel="stylesheet/less" type="text/css" href="css/modules/jobs.less"/>
     <script src="js/less.min.js"></script>
 </head>
@@ -15,11 +16,102 @@
     <div class="page-content">
         <section class="jobs-header-widget-wrapper widget-wrapper">
             <section class="your-jobs widget">
-                <h1>Your Jobs</h1>
-                <p class="subheading">where you can view all your requests and quotes</p>
+                <div class="your-jobs-header">
+                    <h1>Your Jobs</h1>
+                    <p class="subheading">where you can view all your requests and quotes</p>
+                </div>
+                <div class="counter-container">
+                    <div class="counter completed-jobs">
+                        0
+                        <span>completed</span>
+                    </div>
+                    <div class="counter in-progress-jobs">
+                        2
+                        <span>in progress</span>
+                    </div>
+                </div>
             </section>
             <section class="jobs-in-progress widget">
                 <h2>Jobs in Progress</h2>
+            </section>
+        </section>
+        <section class="quote-widget-wrapper widget-wrapper">
+            <section class="job-details widget">
+                <div class="job-description">
+                    <h4>Job Description</h4>
+                    <p><span class="job-title">Oil Change</span> VW Passat 1.6L Diesel</p>
+                </div>
+                <div class="order-number">
+                    <h4>Order number</h4>
+                    <p>ebay245567</p>
+                </div>
+                <div class="date-created">
+                    <h4>Date Created</h4>
+                    <p>30 May 2014</p>
+                </div>
+
+            </section>
+            <section class="quote-wrapper widget">
+                <p class="quote-intro">These are the first 3 repair deals we have received for your request:</p>
+                <div class="widget-wrapper">
+                    <section class="no-quote widget">
+                        <div>
+                            <div>
+                                <h1>Watch This Space</h1>
+                                <img src="img/waiting.png"/>
+                                <p>We're waiting<br/> for your quotes</p>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="widget quote">
+                        <div class="branding">
+                            <h4 class="garage-name">Zweirad Technik Berlin GmbH</h4>
+                            <div class="garage-logo-wrapper">
+                                <img src="http://www.teknicar.dk/Files/Billeder/Layout/logo.png"/>
+                            </div>
+                        </div>
+                        <div class="total-cost-wrapper">
+                            <div class="total-cost">Total cost <span>(Incl. VAT)</span></div>
+                            <div class="cost">EUR 95,00</div>
+                        </div>
+                        <div class="contact-garage-wrapper">
+                            <a href="#">Contact Workshop</a>
+                        </div>
+                        <div class="about-the-workshop">
+                            <h4>About the workshop</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut consectetur nec velit at mollis. Sed
+                                tempus ipsum vel facilisis volutpat. Phasellus non lectus sit amet est pulvinar tempor.</p>
+                            <address>Loremipsumplatz 28, 2000 Friedriksberg</address>
+                        </div>
+                        <div class="payment-details">
+                            <h4>Payment Method</h4>
+                            <p>Cash or debit card in the workshop</p>
+                            <table>
+                                <tr>
+                                    <td>Spare parts</td>
+                                    <td>EUR 19,00</td>
+                                </tr>
+                                <tr>
+                                    <td>Labour Cost</td>
+                                    <td>EUR 76,00</td>
+                                </tr>
+                                <tr>
+                                    <td>Extra</td>
+                                    <td>EUR 0,00</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </section>
+                    <section class="no-quote widget">
+                        <div>
+                            <div>
+                                <h1>Watch This Space</h1>
+                                <img src="img/waiting.png"/>
+                                <p>We're waiting<br/> for your quotes</p>
+                            </div>
+                            <div>
+                    </section>
+                </div>
             </section>
         </section>
         <section class="quote-widget-wrapper widget-wrapper">

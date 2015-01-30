@@ -9,10 +9,6 @@
   margin-bottom: 20px;
   float: left;
 
-  .widget-wrapper, .widget {
-    background-color: white;
-  }
-
   .widget {
     width: 100%;
   }
@@ -23,6 +19,12 @@
   padding: 0 20px 20px;
   border: @job-border;
   float: left;
+  background-color: white;
+
+  > .widget-wrapper {
+    float: left;
+    position: relative;
+  }
 
   .widget {
     margin: 20px 0;
@@ -50,121 +52,121 @@
       }
     }
   }
+}
 
-  .quote {
-    min-width: (768px/3)-25;
-    border: @job-border;
+.quote {
+  min-width: (768px/3)-25;
+  border: @job-border;
+  box-sizing: border-box;
+  background-color: white;
+
+  .branding {
+    height: 120px;
+    display: table-row;
+
+    .garage-name {
+      width: 100%;
+      display: table-cell;
+      vertical-align: top;
+      padding: 25px @default-padding;
+      border-right: @job-border;
+      font-family: @highlight-font;
+      font-size: 1.5em;
+    }
+
+    .garage-logo-wrapper {
+      display: table-cell;
+      vertical-align: middle;
+
+      img {
+        box-sizing: border-box;
+        width: 120px;
+        padding: 15px;
+      }
+    }
+  }
+
+  .total-cost-wrapper {
     box-sizing: border-box;
+    border-top: @job-border;
 
-    .branding {
-      height: 120px;
-      display: table-row;
-
-      .garage-name {
-        width: 100%;
-        display: table-cell;
-        vertical-align: top;
-        padding: 25px @default-padding;
-        border-right: @job-border;
-        font-family: @highlight-font;
-        font-size: 1.5em;
-      }
-
-      .garage-logo-wrapper {
-        display: table-cell;
-        vertical-align: middle;
-
-        img {
-          box-sizing: border-box;
-          width: 120px;
-          padding: 15px;
-        }
-      }
-    }
-
-    .total-cost-wrapper {
-      box-sizing: border-box;
-      border-top: @job-border;
-
-      > div {
-        padding: @default-padding;
-
-        &:first-child {
-          padding-right: 0;
-        }
-      }
-
-      .total-cost {
-        float: left;
-        font-size: 1em;
-        font-weight: bold;
-
-
-        span {
-          font-weight: normal;
-          font-size: 0.75em;
-          display: block;
-        }
-      }
-
-      .cost {
-        color: @highlight-colour;
-        font-size: 1.75em;
-        float: right;
-        font-family: @highlight-font;
-      }
-    }
-
-    .contact-garage-wrapper {
-      background: url('../../img/border-seperator.png') top left repeat-x #333;
-      padding: 34px 20px 27px;
-      clear: both;
-      text-align: center;
-
-      a {
-        box-shadow: 0px 3px 2px #222;
-        padding: 10px 0;
-        min-width: 150px;
-        max-width: 250px;
-        display: inline-block;
-        border-radius: 3px;
-        color: white;
-        text-decoration: none;
-        text-shadow: 0px 1px 1px #555;
-        background: linear-gradient(180deg, #71b52e, #489314);
-      }
-    }
-
-    .about-the-workshop, .payment-details {
+    > div {
       padding: @default-padding;
 
-      h4 {
-        font-weight: bold;
-        margin-bottom: 10px;
+      &:first-child {
+        padding-right: 0;
       }
     }
 
-    .about-the-workshop {
+    .total-cost {
+      float: left;
+      font-size: 1em;
+      font-weight: bold;
 
-      p:last-child {
-        margin-bottom: 0;
+      span {
+        font-weight: normal;
+        font-size: 0.75em;
+        display: block;
       }
     }
 
-    .payment-details {
-      border-top: @job-border;
+    .cost {
+      color: @highlight-colour;
+      font-size: 1.75em;
+      float: right;
+      font-family: @highlight-font;
+    }
+  }
 
-      table {
-        width: 100%;
-        tr:last-child td {
-          padding-bottom: 0;
-        }
-        td {
-          padding: 5px 0px 5px;
-        }
-        td:last-child {
-          text-align: right;
-        }
+  .contact-garage-wrapper {
+    background: url('../../img/border-seperator.png') top left repeat-x #333;
+    padding: 34px 20px 27px;
+    clear: both;
+    text-align: center;
+
+    a {
+      box-shadow: 0px 3px 2px #222;
+      padding: 10px 0;
+      min-width: 150px;
+      max-width: 250px;
+      display: inline-block;
+      border-radius: 3px;
+      color: white;
+      text-decoration: none;
+      text-shadow: 0px 1px 1px #555;
+      background: linear-gradient(180deg, #71b52e, #489314);
+    }
+  }
+
+  .about-the-workshop, .payment-details {
+    padding: @default-padding;
+
+    h4 {
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+  }
+
+  .about-the-workshop {
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .payment-details {
+    border-top: @job-border;
+
+    table {
+      width: 100%;
+      tr:last-child td {
+        padding-bottom: 0;
+      }
+      td {
+        padding: 5px 0px 5px;
+      }
+      td:last-child {
+        text-align: right;
       }
     }
   }
