@@ -1,13 +1,17 @@
-@highlight-colour: #fab558;
-@details-accent-colour: #ccc;
-@border-colour: #ccc;
+@import "../variables.less";
+
+@details-accent-colour: #a8a8a8;
+
+.job-highlight-border {
+  border-left: 4px solid @highlight-colour;
+  padding-left: 16px;
+}
 
 .job-details {
-  border: 1px solid @border-colour;
+  border: @job-border;
   border-bottom: none;
   float: left;
-  border-left: 3px solid @highlight-colour;
-
+  box-sizing: border-box;
 
   @media screen and (max-width: 768px) {
     min-width: 240px;
@@ -15,14 +19,12 @@
   h4 {
     font-size: 1em;
     color: @details-accent-colour;
-    margin: 10px;
-  }
-  p {
-    margin: 10px;
+    margin: 10px 0;
   }
   .job-description {
     float: left;
     height: 100%;
+    .job-highlight-border;
 
     @media screen and (max-width: 768px) {
       display: block;
@@ -46,6 +48,7 @@
       display: block;
       width: 100%;
       float: left;
+      .job-highlight-border;
     }
   }
 
