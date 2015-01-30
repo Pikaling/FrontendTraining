@@ -3,6 +3,6 @@
 *.iml
 .idea
 .idea_modules
-
+*.iml
 #mac stuff
 .DS_STORE
