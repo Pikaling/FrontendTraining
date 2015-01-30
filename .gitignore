@@ -1,3 +1,8 @@
-igor2.iml
+# IDEA Stuff
+*.idea
+*.iml
 .idea
-.DS_Store
+.idea_modules
+*.iml
+#mac stuff
+.DS_STORE
